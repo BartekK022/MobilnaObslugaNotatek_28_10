@@ -9,6 +9,7 @@
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -29,10 +30,12 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="15dp"
+            android:backgroundTint="@color/design_default_color_error"
             android:text="Dodaj" />
     </LinearLayout>
 
     <ListView
+        android:id="@+id/listViewNotatki"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
