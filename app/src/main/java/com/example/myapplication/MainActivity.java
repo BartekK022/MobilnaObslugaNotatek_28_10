@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -39,6 +40,18 @@ public class MainActivity extends AppCompatActivity {
                 android.R.layout.simple_list_item_1,
                 arrayListNotatki);
         listViewNotatki.setAdapter(arrayAdapterNotatki);
+
+        buttonDodajNotatke.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        String stringNotatka = editTextNowaNotatka.getText().toString();
+                        arrayListNotatki.add(stringNotatka);
+                        arrayAdapterNotatki.notifyDataSetChanged();
+                        editTextNowaNotatka.setText("");
+                    }
+                }
+        );
 
 
 
